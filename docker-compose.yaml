@@ -1,0 +1,33 @@
+version: "3.7"
+services:
+  # application backend container
+  api-m2-back:
+    container_name: api-m2-back
+    build:
+      context: .
+      dockerfile: back-end.Dockerfile
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 8000:80
+    networks:
+      - net-m2
+
+  api-m2-db:
+    container_name: api-m2-db
+    image: mysql:5.6
+    volumes:
+      - data-base-mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=m2_digital
+    networks:
+      - net-m2
+
+networks:
+  net-m2:
+    driver: bridge
+
+volumes:
+  php-dados:
+  data-base-mysql:
