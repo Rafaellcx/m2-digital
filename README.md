@@ -58,3 +58,7 @@ If you want to stop the `api-m2-back` container, run the following command:
 ```sh
 docker container stop api-m2-back
 ```
+## ER Diagram
+In the proposed diagram, note that there could be a relationship between city and group similar to the relationship between campaign and product tables, however, despite being a very viable form of normalization, for the test in question it would not be mandatory.
+
+![img_1.png](img_1.png)
