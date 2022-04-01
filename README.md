@@ -24,7 +24,7 @@ After downloading the **m2-digital** repository, being in its main folder, go up
 docker-compose build
 ```
 ```sh 
-docker container start api-m2-back api-m2-db
+docker-compose up -d
 ```
 
 After finishing the creation of the containers, we must execute the commands below so that the environment is ready to be used:

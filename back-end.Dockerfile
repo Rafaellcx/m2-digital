@@ -30,9 +30,6 @@ COPY . /var/www/html
 # Installing Composer
 RUN composer install
 
-# Changes the user to own the folder and files recursively
-RUN chown -R www-data:www-data storage/
-
 # Exposing internal server port
 EXPOSE 80
 
